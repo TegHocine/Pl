@@ -1,0 +1,31 @@
+<div class="border-border bg-background border-t">
+  <div class="grid lg:grid-cols-6">
+    <app-side-menu />
+    <div class="lg:col-span-5">
+      <div class="h-full px-4 py-6 lg:px-8">
+        <div hlmTabsContent="music_tab" class="w-full">
+          <div class="mt-5 space-y-1">
+            <h2 class="text-2xl font-semibold tracking-tight">
+              Player by Position
+            </h2>
+          </div>
+
+          <brn-separator hlmSeparator />
+
+          <div class="mt-2 pb-4">
+            <div class="mt-2">
+              <app-player-table
+                [players]="_players?.page || []"
+              ></app-player-table>
+              <app-pagination
+                [(currentPage)]="page"
+                [(itemsPerPage)]="pageSize"
+                [totalItems]="totalProducts()"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

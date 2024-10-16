@@ -1,0 +1,60 @@
+<div class="flex justify-end lg:hidden pr-4 pt-6 lg:pr-8">
+  <hlm-sheet side="left">
+    <button brnSheetTrigger class="ml-auto">
+      <hlm-icon size="sm" name="lucideMenu" class="h-7 w-7" />
+    </button>
+    <hlm-sheet-content *brnSheetContent="let ctx">
+      <div class="side-menu h-full block min-h-screen">
+        <div class="space-y-4 py-4">
+          <div class="px-3 py-2">
+            <h2 class="mb-2 px-4 text-lg font-semibold tracking-tight">
+              PremierZone
+            </h2>
+            <div class="space-y-1">
+              @for (item of navList; track item) {
+
+              <a [routerLink]="item.link">
+                <app-side-button
+                  class="font-medium"
+                  routerLinkActive="bg-secondary"
+                  [routerLinkActiveOptions]="{ exact: true }"
+                >
+                  <hlm-icon size="sm" [name]="item.icon" class="mr-2 h-4 w-4" />
+                  {{ item.text }}
+                </app-side-button></a
+              >
+
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </hlm-sheet-content>
+  </hlm-sheet>
+</div>
+
+<div class="border-border hidden h-full border-r lg:block min-h-screen">
+  <div class="space-y-4 py-4">
+    <div class="px-3 py-2">
+      <h2 class="mb-2 px-4 text-lg font-semibold tracking-tight">
+        PremierZone
+      </h2>
+      <div class="space-y-1">
+        @for (item of navList; track item) {
+
+        <a [routerLink]="item.link">
+          <app-side-button
+            class="font-medium"
+            routerLinkActive="bg-secondary"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <hlm-icon size="sm" [name]="item.icon" class="mr-2 h-4 w-4" />
+            {{ item.text }}
+          </app-side-button></a
+        >
+
+        }
+      </div>
+    </div>
+  </div>
+</div>

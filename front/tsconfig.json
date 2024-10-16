@@ -1,0 +1,75 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/app/*"
+      ],
+      "@spartan-ng/ui-button-helm": [
+        ".\\src/app/components/ui/ui-button-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-card-helm": [
+        ".\\src/app/components/ui/ui-card-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-typography-helm": [
+        ".\\src/app/components/ui/ui-typography-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-menu-helm": [
+        ".\\src/app/components/ui/ui-menu-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-icon-helm": [
+        ".\\src/app/components/ui/ui-icon-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-separator-helm": [
+        ".\\src/app/components/ui/ui-separator-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-scrollarea-helm": [
+        ".\\src/app/components/ui/ui-scrollarea-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-input-helm": [
+        ".\\src/app/components/ui/ui-input-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-formfield-helm": [
+        ".\\src/app/components/ui/ui-formfield-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-sheet-helm": [
+        ".\\src/app/components/ui/ui-sheet-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-table-helm": [
+        ".\\src/app/components/ui/ui-table-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-pagination-helm": [
+        ".\\src/app/components/ui/ui-pagination-helm/src/index.ts"
+      ],
+      "@spartan-ng/ui-select-helm": [
+        ".\\src/app/components/ui/ui-select-helm/src/index.ts"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

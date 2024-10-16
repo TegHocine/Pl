@@ -1,0 +1,52 @@
+<div>
+  @if(players && players.length > 0){
+  <div
+    class="w-full min-w-[400px] border-border mt-4 max-h-[calc(100dvh-200px)] overflow-auto rounded-md border"
+  >
+    <table class="table-auto w-full text-sm text-left">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+        <tr>
+          <th class="whitespace-nowrap px-3 py-3">Player</th>
+          <th class="whitespace-nowrap px-3 py-3">Nation</th>
+          <th class="whitespace-nowrap px-3 py-3">Position</th>
+          <th class="whitespace-nowrap px-3 py-3">Age</th>
+          <th class="whitespace-nowrap px-3 py-3">Matches</th>
+          <th class="whitespace-nowrap px-3 py-3">Starts</th>
+          <th class="whitespace-nowrap px-3 py-3">Minutes Played</th>
+          <th class="whitespace-nowrap px-3 py-3">Goals</th>
+          <th class="whitespace-nowrap px-3 py-3">Assists</th>
+          <th class="whitespace-nowrap px-3 py-3">Penalties</th>
+          <th class="whitespace-nowrap px-3 py-3">Yellow Cards</th>
+          <th class="whitespace-nowrap px-3 py-3">Red Cards</th>
+          <th class="whitespace-nowrap px-3 py-3">Goals</th>
+          <th class="whitespace-nowrap px-3 py-3">Assists</th>
+          <th class="whitespace-nowrap px-3 py-3">Team</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (player of players; track player.id) {
+        <tr class="bg-white border-b">
+          <td class="px-3 py-3">{{ player.playerName }}</td>
+          <td class="px-3 py-3">{{ player.nation }}</td>
+          <td class="px-3 py-3">{{ player.position }}</td>
+          <td class="px-3 py-3">{{ player.age }}</td>
+          <td class="px-3 py-3">{{ player.matchPlayed }}</td>
+          <td class="px-3 py-3">{{ player.starts }}</td>
+          <td class="px-3 py-3">{{ player.minutesPlayed }}</td>
+          <td class="px-3 py-3">{{ player.goals }}</td>
+          <td class="px-3 py-3">{{ player.assists }}</td>
+          <td class="px-3 py-3">{{ player.penaltiesScored }}</td>
+          <td class="px-3 py-3">{{ player.yellowCards }}</td>
+          <td class="px-3 py-3">{{ player.redCards }}</td>
+          <td class="px-3 py-3">{{ player.expectedGoals }}</td>
+          <td class="px-3 py-3">{{ player.expectedAssists }}</td>
+          <td class="px-3 py-3">{{ player.team }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  } @else {
+  <p class="text-center py-4 text-gray-500">No players found.</p>
+  }
+</div>
